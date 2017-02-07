@@ -66,8 +66,10 @@ bgLocationServices.configure({
 //Register a callback for location updates, this is where location objects will be sent in the background
 bgLocationServices.registerForLocationUpdates(function(location) {
      console.log("We got an BG Update" + JSON.stringify(location));
+     alert("We got an BG Update" + JSON.stringify(location));
 }, function(err) {
      console.log("Error: Didnt get an update", err);
+     alert("Error: Didnt get an update", err);
 });
 
 //Register for Activity Updates
@@ -77,8 +79,10 @@ bgLocationServices.registerForLocationUpdates(function(location) {
 //https://developers.google.com/android/reference/com/google/android/gms/location/DetectedActivity
 bgLocationServices.registerForActivityUpdates(function(activities) {
      console.log("We got an activity update" + activities);
+     alert("We got an activity update" + activities);
 }, function(err) {
      console.log("Error: Something went wrong", err);
+     alert("Error: Something went wrong", err);
 });
 
 //Start the Background Tracker. When you enter the background tracking will start, and stop when you enter the foreground.
