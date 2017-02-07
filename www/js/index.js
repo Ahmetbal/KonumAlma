@@ -40,8 +40,10 @@ var app = {
         //Make sure to get at least one GPS coordinate in the foreground before starting background services
 navigator.geolocation.getCurrentPosition(function() {
  console.log("Succesfully retreived our GPS position, we can now start our background tracker.");
+    alert("Succesfully retreived our GPS position, we can now start our background tracker.");
 }, function(error) {
  console.error(error);
+    alert(error);
 });
 
 //Get plugin
